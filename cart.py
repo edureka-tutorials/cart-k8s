@@ -21,8 +21,8 @@ mongopass = os.environ['MONGO_PASS']
 #db = client.ordersDb
 #client = pymongo.MongoClient("mongodb://appAdmin:********@172.31.27.52:27017/")
 client = pymongo.MongoClient('mongodb://%s:%s@%s:27017/' % (mongoid, mongopass, mongourl))
-db = client["ordersdb"]
-col = db["orders"]
+db = client["cartdb"]
+col = db["cart_items"]
 
 
 @app.route('/add-to-cart', methods=['POST'])
